@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import people from "./people.json"
-import { Typography, Grid, Box } from "@material-ui/core"
+import links from "./links.json"
+import { Typography, Grid, Box, IconButton, Link } from "@material-ui/core"
 
 function getTime(offset, d) {
     let localTime = d.getTime();
@@ -77,5 +78,16 @@ export default function App() {
             })}
         </Grid>
 
+        <Box p={4}>
+            <Grid container spacing={2} direction="column" >
+                {links.map(link => {
+                    return <Grid item>
+                        <Link href={link.url}>
+                            <Typography>{link.name}</Typography>
+                        </Link>
+                    </Grid>
+                })}
+            </Grid>
+        </Box>
     </div>)
 }
