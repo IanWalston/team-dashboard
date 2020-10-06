@@ -1,111 +1,121 @@
 import React, { useState, useEffect } from "react";
-import people from "./people.json"
-import links from "./links.json"
+
 import { Typography, Grid, Box, Switch, Link, FormGroup, FormControlLabel } from "@material-ui/core"
+import clsx from 'clsx';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 
-const wrapperStyle = { maxWidth: '700px', margin: '12px auto' }
+import ListItem from '@material-ui/core/ListItem';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
+import Roster from './Components/Roster'
+import SideBar from './Components/SideBar'
 
-function getTime(offset, d, hour12) {
-    let localTime = d.getTime();
-    let localOffset = d.getTimezoneOffset() * 60000;
+const drawerWidth = 240;
 
-    // obtain UTC time in msec
-    let utc = localTime + localOffset;
-    // create new Date object for different city
-    // using supplied offset
-    let nd = new Date(utc + (3600000 * offset));
-    //nd = 3600000 + nd;
-    utc = new Date(utc);
-    // return time as a string
 
-    var options = {
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        hour12: hour12
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+    },
+    appBar: {
+        transition: theme.transitions.create(['margin', 'width'], {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+    },
+    drawerHeader: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: theme.spacing(0, 1),
+        // necessary for content to be below app bar
+        ...theme.mixins.toolbar,
+        justifyContent: 'flex-end',
+    },
+    appBarShift: {
+        width: `calc(100% - ${drawerWidth}px)`,
+        marginLeft: drawerWidth,
+        transition: theme.transitions.create(['margin', 'width'], {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    hide: {
+        display: 'none',
+    },
+    content: {
+        flexGrow: 1,
+        padding: theme.spacing(3),
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+        marginLeft: -drawerWidth,
+    },
+    contentShift: {
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+        marginLeft: 0,
+    },
+}));
+
+function ListItemLink(props) {
+    return <ListItem button component="a" {...props} />;
+  }
+
+export default function PersistentDrawerLeft() {
+    const classes = useStyles();
+    const theme = useTheme();
+    const [open, setOpen] = React.useState(false);
+
+    const handleDrawerOpen = () => {
+        setOpen(true);
     };
 
-    return nd.toLocaleString('en-US', options)
-}
+    const handleDrawerClose = () => {
+        setOpen(false);
+    };
 
-export default function App() {
-    const [time, setTime] = useState(new Date())
-    const [hour12, setHour12] = useState(false)
-
-
-    useEffect(
-        () => {
-            setInterval(() => {
-                setTime(new Date())
-            }, 1000)
-        }
-    )
-
-    return (<div style={wrapperStyle}>
-        <img width='100%' src='https://cdn.discordapp.com/attachments/762277813402599445/762404405416427580/logo-dark.png' />
-        <Box mb={4}>
-            <Typography variant='h3' align='center'>Artistify Team</Typography>
-        </Box>
-
-
-        <Grid component="label" container justify='flex-end' alignItems="center" spacing={1}>
-            <Grid item><Typography>24 Hour</Typography></Grid>
-            <Grid item>
-                <Switch checked={hour12} onChange={() => setHour12(!hour12)} />
-            </Grid>
-            <Grid item><Typography>12 Hour</Typography></Grid>
-        </Grid>
-
-
-        <Grid container>
-            <Grid container item>
-                <Grid item xs={2}>
-                    <Typography variant="h6">NAME</Typography>
-                </Grid>
-                <Grid item xs={4}>
-                    <Typography variant="h6">ROLE</Typography>
-                </Grid>
-                <Grid item xs={2}>
-                    <Typography variant="h6">TIME ZONE</Typography>
-                </Grid>
-                <Grid item xs={4}>
-                    <Typography variant="h6" align='right'>CURRENT TIME</Typography>
-                </Grid>
-            </Grid>
-
-            {people.map((person, i) => {
-
-                return <Grid style={{ background: i % 2 == 0 ? '#eee' : '#fff' }} container item>
-                    <Grid item xs={2}>
-                        <Typography>{person.name}</Typography>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <Typography>{person.role}</Typography>
-                    </Grid>
-                    <Grid item xs={2}>
-                        <Typography>GMT{person.timezone >= 0 && "+"}{person.timezone}</Typography>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <Typography align='right'>{getTime(person.timezone, time, hour12)}</Typography>
-                    </Grid>
-                </Grid>
-            })}
-        </Grid>
-
-        <Box p={4}>
-
-            <Typography variant='h3' align='center'>
-                Links
-            </Typography>
-            <Grid container spacing={2} direction="column" >
-                {links.map(link => {
-                    return <Grid item>
-                        <Link href={link.url}>
-                            <Typography>{link.name}</Typography>
-                        </Link>
-                    </Grid>
+    return (
+        <div className={classes.root}>
+            <CssBaseline />
+            <AppBar
+                position="fixed"
+                className={clsx(classes.appBar, {
+                    [classes.appBarShift]: open,
                 })}
-            </Grid>
-        </Box>
-    </div>)
+            >
+                <Toolbar>
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        onClick={handleDrawerOpen}
+                        edge="start"
+                        className={clsx(classes.menuButton, open && classes.hide)}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <Typography variant="h6" noWrap>
+                        Artistify Team
+          </Typography>
+                </Toolbar>
+            </AppBar>
+                <SideBar { ...{handleDrawerClose, handleDrawerOpen, open, setOpen, drawerWidth} }/>
+            <main
+                className={clsx(classes.content, {
+                    [classes.contentShift]: open,
+                })}
+            >
+                <div className={classes.drawerHeader} />
+                <Roster />
+            </main>
+        </div>
+    );
 }
