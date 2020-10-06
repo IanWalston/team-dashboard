@@ -1,21 +1,28 @@
 [
     {
         "name": "Artistify Web App",
-        "url": "https://artistify-2.appspot.com"
+        "url": "https://artistify-2.appspot.com",
+        "icon": "artistify"
     },{
-        "name": "Discord Development and Support Server",
-        "url": "https://discord.gg/PdhzRDJ"
+        "name": "Discord",
+        "url": "https://discord.gg/PdhzRDJ",
+        "icon": "discord"
     },{
         "name": "Project Board",
-        "url": "https://github.com/callbacc/Artistify/projects/1"
+        "url": "https://github.com/callbacc/Artistify/projects/1",
+        "icon": "checklist"
     },{
         "name": "Code Repository",
-        "url": "https://github.com/callbacc/Artistify"
+        "url": "https://github.com/callbacc/Artistify",
+        "icon": "code"
     },{
         "name": "Issue Backlog",
-        "url": "https://github.com/callbacc/Artistify/issues"
+        "url": "https://github.com/callbacc/Artistify/issues",
+        "icon": "list"
     },{
         "name": "Calendar",
-        "url": "https://calendar.google.com/calendar/u/0/r/day/2020/10/7?cid=MXBuNXRiMHZ0dHU1YjYwaW1pamY3aWh1MzRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+        "url": "https://calendar.google.com/calendar/u/0/r/day/2020/10/7?cid=MXBuNXRiMHZ0dHU1YjYwaW1pamY3aWh1MzRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ",
+        "icon": "calendar"
+        
     }
 ]
