@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "name": "NVMe.js",
+        "role": "Project Manager",
+        "timezone": 3
+    },{
+        "id": 1,
+        "name": "Dangle",
+        "role": "Senior Software Developer",
+        "timezone": -4
+    },{
+        "id": 2,
+        "name": "Wraith",
+        "role": "Software Developer",
+        "timezone": 2
+    },{
+        "id": 3,
+        "name": "Milan",
+        "role": "Software Developer",
+        "timezone": 5.5
+    }
+]
