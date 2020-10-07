@@ -20,6 +20,10 @@
         "url": "https://github.com/callbacc/Artistify/issues",
         "icon": "list"
     },{
+        "name": "Cloud Host",
+        "url": "https://console.cloud.google.com/home/dashboard?authuser=1&project=artistify-2",
+        "icon": "cloud"
+    },{
         "name": "Calendar",
         "url": "https://calendar.google.com/calendar/u/0/r/day/2020/10/7?cid=MXBuNXRiMHZ0dHU1YjYwaW1pamY3aWh1MzRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ",
         "icon": "calendar"
