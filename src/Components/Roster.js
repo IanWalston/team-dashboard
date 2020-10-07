@@ -36,7 +36,8 @@ function Roster() {
             setInterval(() => {
                 setTime(new Date())
             }, 1000)
-        }
+        },
+        []
     )
 
     return (<Box style={wrapperStyle}>
