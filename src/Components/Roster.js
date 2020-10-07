@@ -57,16 +57,16 @@ function Roster() {
 
         <Grid container>
             <Grid container item>
-                <Grid item xs={2}>
+                <Grid item xs={3} s={2}>
                     <Typography variant="h6">NAME</Typography>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={3} s={4}>
                     <Typography variant="h6">ROLE</Typography>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item xs={3} s={2}>
                     <Typography variant="h6">TIME ZONE</Typography>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={3} s={4}>
                     <Typography variant="h6" align='right'>CURRENT TIME</Typography>
                 </Grid>
             </Grid>
@@ -74,16 +74,16 @@ function Roster() {
             {people.map((person, i) => {
 
                 return <Grid style={{ background: i % 2 == 0 ? '#eee' : '#fff' }} container item>
-                    <Grid item xs={2}>
+                    <Grid item xs={3} s={2}>
                         <Typography>{person.name}</Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={3} s={4}>
                         <Typography>{person.role}</Typography>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={3} s={2}>
                         <Typography>GMT{person.timezone >= 0 && "+"}{person.timezone}</Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={3} s={4}>
                         <Typography align='right'>{getTime(person.timezone, time, hour12)}</Typography>
                     </Grid>
                 </Grid>
