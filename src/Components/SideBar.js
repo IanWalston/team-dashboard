@@ -61,12 +61,12 @@ function SideBar({ handleDrawerClose, handleDrawerOpen, open, SetOpen }) {
                 return <ListItemLink href={link.url} key={link.name}>
                     <ListItemIcon>{
                         {
-                            "artistify": <img width='32px' src='https://cdn.discordapp.com/attachments/762277813402599445/762415685782470666/icon.png' />,
-                            "discord": <img width='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2018/240/iconmonstr-discord-1.png' />,
-                            "calendar": <img width='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-calendar-4.png' />,
-                            "code": <img width='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2013/240/iconmonstr-code-2.png' />,
-                            "list": <img width='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2013/240/iconmonstr-menu-2.png' />,
-                            "checklist": <img width='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2017/240/iconmonstr-task-1.png' />,
+                            "artistify": <img width='32px' height='32px' src='https://cdn.discordapp.com/attachments/762277813402599445/762415685782470666/icon.png' />,
+                            "discord": <img width='32px'  height='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2018/240/iconmonstr-discord-1.png' />,
+                            "calendar": <img width='32px'  height='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-calendar-4.png' />,
+                            "code": <img width='32px'  height='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2013/240/iconmonstr-code-2.png' />,
+                            "list": <img width='32px'  height='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2013/240/iconmonstr-menu-2.png' />,
+                            "checklist": <img width='32px'  height='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2017/240/iconmonstr-task-1.png' />,
                         }[link.icon]
                     }
                     </ListItemIcon>
