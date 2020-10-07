@@ -67,6 +67,7 @@ function SideBar({ handleDrawerClose, handleDrawerOpen, open, SetOpen }) {
                             "code": <img width='32px'  height='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2013/240/iconmonstr-code-2.png' />,
                             "list": <img width='32px'  height='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2013/240/iconmonstr-menu-2.png' />,
                             "checklist": <img width='32px'  height='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2017/240/iconmonstr-task-1.png' />,
+                            "cloud": <img width='32px'  height='32px' src='https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-cloud-21.png' />,
                         }[link.icon]
                     }
                     </ListItemIcon>
