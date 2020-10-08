@@ -1,23 +1,38 @@
 [
     {
         "id": 0,
-        "name": "NVMe.js",
+        "name": "Alexa",
         "role": "Project Manager",
         "timezone": 3
-    },{
+    },
+    {
         "id": 1,
-        "name": "Dangle",
+        "name": "Ian",
         "role": "Senior Software Developer",
         "timezone": -4
-    },{
+    },
+    {
         "id": 2,
-        "name": "Wraith",
+        "name": "Jose",
         "role": "Software Developer",
         "timezone": 2
-    },{
+    },
+    {
         "id": 3,
         "name": "Milan",
         "role": "Software Developer",
         "timezone": 5.5
+    },
+    {
+        "id": 4,
+        "name": "Nova",
+        "role": "Graphic Designer",
+        "timezone": 3
+    },
+    {
+        "id": 5,
+        "name": "Austin",
+        "role": "Marketing Executive",
+        "timezone": -4
     }
 ]
