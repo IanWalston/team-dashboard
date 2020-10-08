@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import people from "../people.json"
-import { Typography, Grid, Box, Switch, Link, FormGroup, FormControlLabel } from "@material-ui/core"
+import { Typography, Grid, Box, Switch } from "@material-ui/core"
 
 const wrapperStyle = { maxWidth: '700px', margin: '12px auto' }
+
+const sortedPeople = people.sort((a, b) => (a.name > b.name) ? 1 : -1)
 
 function getTime(offset, d, hour12) {
     let localTime = d.getTime();
@@ -46,7 +48,6 @@ function Roster() {
             <Typography variant='h3' align='center'>Artistify Team</Typography>
         </Box>
 
-
         <Grid component="label" container justify='flex-end' alignItems="center" spacing={1}>
             <Grid item><Typography>24 Hour</Typography></Grid>
             <Grid item>
@@ -55,36 +56,35 @@ function Roster() {
             <Grid item><Typography>12 Hour</Typography></Grid>
         </Grid>
 
-
         <Grid container>
             <Grid container item>
-                <Grid item xs={3} s={2}>
+                <Grid item xs={3} sm={2}>
                     <Typography variant="h6">NAME</Typography>
                 </Grid>
-                <Grid item xs={3} s={4}>
+                <Grid item xs={3} sm={4}>
                     <Typography variant="h6">ROLE</Typography>
                 </Grid>
-                <Grid item xs={3} s={2}>
+                <Grid item xs={3} sm={2}>
                     <Typography variant="h6">TIME ZONE</Typography>
                 </Grid>
-                <Grid item xs={3} s={4}>
+                <Grid item xs={3} sm={4}>
                     <Typography variant="h6" align='right'>CURRENT TIME</Typography>
                 </Grid>
             </Grid>
 
-            {people.map((person, i) => {
+            {sortedPeople.map((person, i) => {
 
                 return <Grid style={{ background: i % 2 == 0 ? '#eee' : '#fff' }} container item>
-                    <Grid item xs={3} s={2}>
+                    <Grid item xs={3} sm={2}>
                         <Typography>{person.name}</Typography>
                     </Grid>
-                    <Grid item xs={3} s={4}>
+                    <Grid item xs={3} sm={4}>
                         <Typography>{person.role}</Typography>
                     </Grid>
-                    <Grid item xs={3} s={2}>
+                    <Grid item xs={3} sm={2}>
                         <Typography>GMT{person.timezone >= 0 && "+"}{person.timezone}</Typography>
                     </Grid>
-                    <Grid item xs={3} s={4}>
+                    <Grid item xs={3} sm={4}>
                         <Typography align='right'>{getTime(person.timezone, time, hour12)}</Typography>
                     </Grid>
                 </Grid>
