@@ -48,7 +48,6 @@ function SideBar({ handleDrawerClose, handleDrawerOpen, open, SetOpen }) {
         }}
     >
         <div className={classes.drawerHeader}>
-            <img width='100px' src='https://cdn.discordapp.com/attachments/762277813402599445/762404405416427580/logo-dark.png' />
             <IconButton onClick={handleDrawerClose}>
                 {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
             </IconButton>

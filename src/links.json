@@ -30,6 +30,11 @@
         "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-cloud-21.png"
     },
     {
+        "name": "Analytics",
+        "url": "https://analytics.google.com/analytics/web/#/p251356729/reports/defaulthome",
+        "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-monitoring-7.png"
+    },
+    {
         "name": "Drive",
         "url": "https://drive.google.com/drive/folders/107qjiSUReAR62MWryQf4c-3PYIeDocf2?usp=sharing",
         "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-folder-2.png"

@@ -82,7 +82,7 @@ function ListItemLink(props) {
 export default function PersistentDrawerLeft() {
     const classes = useStyles();
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -94,39 +94,39 @@ export default function PersistentDrawerLeft() {
 
     return (
         <div className={classes.root}>
-    <ThemeProvider theme={darkTheme}>
+            <ThemeProvider theme={darkTheme}>
 
-            <CssBaseline />
-            <AppBar
-                position="fixed"
-                className={clsx(classes.appBar, {
-                    [classes.appBarShift]: open,
-                })}
-            >
-                <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={handleDrawerOpen}
-                        edge="start"
-                        className={clsx(classes.menuButton, open && classes.hide)}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap>
-                        Qasong Team
-          </Typography>
-                </Toolbar>
-            </AppBar>
-            <SideBar {...{ handleDrawerClose, handleDrawerOpen, open, setOpen, drawerWidth }} />
-            <main
-                className={clsx(classes.content, {
-                    [classes.contentShift]: open,
-                })}
-            >
-                <div className={classes.drawerHeader} />
-                <Roster />
-            </main>
+                <CssBaseline />
+                <AppBar
+                    position="fixed"
+                    className={clsx(classes.appBar, {
+                        [classes.appBarShift]: open,
+                    })}
+                >
+                    <Toolbar>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            onClick={handleDrawerOpen}
+                            edge="start"
+                            className={clsx(classes.menuButton, open && classes.hide)}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography variant="h6" noWrap>
+                            Qasong Team
+                        </Typography>
+                    </Toolbar>
+                </AppBar>
+                <SideBar {...{ handleDrawerClose, handleDrawerOpen, open, setOpen, drawerWidth }} />
+                <main
+                    className={clsx(classes.content, {
+                        [classes.contentShift]: open,
+                    })}
+                >
+                    <div className={classes.drawerHeader} />
+                    <Roster />
+                </main>
             </ThemeProvider>
         </div>
     );
