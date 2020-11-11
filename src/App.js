@@ -114,7 +114,7 @@ export default function PersistentDrawerLeft() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Artistify Team
+                        Qasong Team
           </Typography>
                 </Toolbar>
             </AppBar>
