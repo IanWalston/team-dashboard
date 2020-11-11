@@ -1,38 +1,44 @@
 [
     {
         "id": 0,
-        "name": "Alexa",
+        "name": "A",
         "role": "Project Manager",
         "timezone": 3
     },
     {
         "id": 1,
-        "name": "Ian",
+        "name": "I",
         "role": "Senior Software Developer",
         "timezone": -4
     },
     {
         "id": 2,
-        "name": "Jose",
+        "name": "J",
         "role": "Software Developer",
         "timezone": 2
     },
     {
         "id": 3,
-        "name": "Milan",
+        "name": "Mi",
         "role": "Software Developer",
         "timezone": 5.5
     },
     {
         "id": 4,
-        "name": "Nova",
+        "name": "No",
         "role": "Graphic Designer",
         "timezone": 3
     },
     {
         "id": 5,
-        "name": "Austin",
-        "role": "Marketing Executive",
+        "name": "Au",
+        "role": "Marketing Consultant",
+        "timezone": -4
+    },
+    {
+        "id": 5,
+        "name": "Ni",
+        "role": "UX/UI Designer",
         "timezone": -4
     }
 ]

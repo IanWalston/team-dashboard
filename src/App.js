@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
 
-import { Typography, Grid, Box, Switch, Link, FormGroup, FormControlLabel } from "@material-ui/core"
+import { Typography } from "@material-ui/core"
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import { CssBaseline } from "@material-ui/core";
 
 import ListItem from '@material-ui/core/ListItem';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -14,6 +16,13 @@ import Roster from './Components/Roster'
 import SideBar from './Components/SideBar'
 
 const drawerWidth = 240;
+
+const darkTheme = createMuiTheme({
+    palette: {
+
+        type: "dark",
+    },
+});
 
 
 const useStyles = makeStyles((theme) => ({
@@ -68,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
 
 function ListItemLink(props) {
     return <ListItem button component="a" {...props} />;
-  }
+}
 
 export default function PersistentDrawerLeft() {
     const classes = useStyles();
@@ -85,6 +94,8 @@ export default function PersistentDrawerLeft() {
 
     return (
         <div className={classes.root}>
+    <ThemeProvider theme={darkTheme}>
+
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -107,7 +118,7 @@ export default function PersistentDrawerLeft() {
           </Typography>
                 </Toolbar>
             </AppBar>
-                <SideBar { ...{handleDrawerClose, handleDrawerOpen, open, setOpen, drawerWidth} }/>
+            <SideBar {...{ handleDrawerClose, handleDrawerOpen, open, setOpen, drawerWidth }} />
             <main
                 className={clsx(classes.content, {
                     [classes.contentShift]: open,
@@ -116,6 +127,7 @@ export default function PersistentDrawerLeft() {
                 <div className={classes.drawerHeader} />
                 <Roster />
             </main>
+            </ThemeProvider>
         </div>
     );
 }

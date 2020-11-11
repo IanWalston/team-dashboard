@@ -1,23 +1,13 @@
 [
     {
-        "name": "Artistify Web App",
-        "url": "https://artistify-2.appspot.com",
+        "name": "Qasong Web App",
+        "url": "https://qasong.appspot.com",
         "iconUrl": "https://cdn.discordapp.com/attachments/762277813402599445/762415685782470666/icon.png"
     },
     {
         "name": "Discord",
         "url": "https://discord.gg/PdhzRDJ",
         "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2018/240/iconmonstr-discord-1.png"
-    },
-    {
-        "name": "Facebook",
-        "url": "https://www.facebook.com/Artistify-App-109146857628636/?view_public_for=109146857628636",
-        "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2017/240/iconmonstr-facebook-6.png"
-    },
-    {
-        "name": "Instagram",
-        "url": "https://www.instagram.com/artistify_app/",
-        "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-instagram-6.png"
     },
     {
         "name": "Project Board",

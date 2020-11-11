@@ -45,7 +45,7 @@ function Roster() {
     return (<Box style={wrapperStyle}>
 
         <Box mb={4}>
-            <Typography variant='h3' align='center'>Artistify Team</Typography>
+            <Typography variant='h3' align='center'>Qasong Team</Typography>
         </Box>
 
         <Grid component="label" container justify='flex-end' alignItems="center" spacing={1}>
@@ -74,7 +74,7 @@ function Roster() {
 
             {sortedPeople.map((person, i) => {
 
-                return <Grid style={{ background: i % 2 == 0 ? '#eee' : '#fff' }} container item>
+                return <Grid style={{ background: i % 2 == 0 ? '#242424' : '#292929' }} container item>
                     <Grid item xs={3} sm={2}>
                         <Typography>{person.name}</Typography>
                     </Grid>
