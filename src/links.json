@@ -11,26 +11,26 @@
     },
     {
         "name": "Project Board",
-        "url": "https://github.com/callbacc/Artistify/projects/1",
+        "url": "https://github.com/IanWalston/qasong/projects/1",
         "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2017/240/iconmonstr-task-1.png"
     },
     {
-        "name": "Code Repository",
-        "url": "https://github.com/callbacc/Artistify",
+        "name": "Code",
+        "url": "https://github.com/IanWalston/qasong",
         "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2013/240/iconmonstr-code-2.png"
     },
     {
-        "name": "Issue Backlog",
-        "url": "https://github.com/callbacc/Artistify/issues",
+        "name": "Backlog",
+        "url": "https://github.com/IanWalston/qasong/issues",
         "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2013/240/iconmonstr-menu-2.png"
     },
     {
-        "name": "Cloud Host",
+        "name": "Cloud",
         "url": "https://console.cloud.google.com/home/dashboard?authuser=1&project=artistify-2",
         "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-cloud-21.png"
     },
     {
-        "name": "Google Drive",
+        "name": "Drive",
         "url": "https://drive.google.com/drive/folders/107qjiSUReAR62MWryQf4c-3PYIeDocf2?usp=sharing",
         "iconUrl": "https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-folder-2.png"
     },{
