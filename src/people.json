@@ -7,25 +7,25 @@
     },
     {
         "id": 1,
-        "name": "I",
+        "name": "Ian",
         "role": "Senior Software Developer",
         "timezone": -4
     },
     {
         "id": 2,
-        "name": "J",
+        "name": "Jose",
         "role": "Software Developer",
         "timezone": 2
     },
     {
         "id": 3,
-        "name": "Mi",
+        "name": "Milan",
         "role": "Software Developer",
         "timezone": 5.5
     },
     {
         "id": 4,
-        "name": "No",
+        "name": "Nova",
         "role": "Graphic Designer",
         "timezone": 3
     },
@@ -40,5 +40,11 @@
         "name": "Ni",
         "role": "UX/UI Designer",
         "timezone": -4
-    }
+    },
+    {
+        "id": 6,
+        "name": "Unjown",
+        "role": "General assistant",
+        "timeone":+8
+    }   
 ]
