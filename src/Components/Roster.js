@@ -47,7 +47,10 @@ function Roster() {
         <Box mb={4}>
             <Typography variant='h3' align='center'>Qasong Team</Typography>
         </Box>
-
+        <Typography>  Qaong is an app for listening to music with minimal ads to none! 
+            Qaong is an open-source project the code can be found in github
+            Qasong's offical release is December 20, 2020
+            </Typography>
         <Grid component="label" container justify='flex-end' alignItems="center" spacing={1}>
             <Grid item><Typography>24 Hour</Typography></Grid>
             <Grid item>
