@@ -8,7 +8,7 @@
     {
         "id": 1,
         "name": "Ian",
-        "role": "Senior Software Developer",
+        "role": "Software Developer",
         "timezone": -4
     },
     {
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "name": "Nicole",
-        "role": "UX/UI Designer",
+        "role": "UX Consultant",
         "timezone": -4
     },
     {
